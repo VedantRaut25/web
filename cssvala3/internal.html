@@ -1,22 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
   <title>Internal CSS Example</title>
   <style>
-    /* Internal styles (page-specific) */
-    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
-    header { background: linear-gradient(90deg,#f0f9ff,#fff); padding: 18px; }
-    header .brand { font-size: 1.4rem; color: #0b6efd; }
-    .notice { background: #fff8e6; border-left: 4px solid #ffd166; padding: 10px; border-radius: 6px; }
-    /* internal pseudo-class */
-    .notice:hover { transform: translateY(-2px); transition: transform .15s; }
+    /* Internal CSS Styles */
+
+    body {
+      background-color: #f5f8ff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #222;
+      margin: 40px;
+    }
+
+    h1 {
+      color: #0b6efd;
+      text-align: center;
+      text-shadow: 1px 1px 2px #ccc;
+    }
+
+    p {
+      background-color: #e9f2ff;
+      color: #333;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    /* Table styling */
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #0b6efd;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f6ff;
+    }
+
+    /* List styling */
+    ul {
+      list-style-type: square;
+      background-color: #eef4ff;
+      padding: 15px;
+      width: 150px;
+      border-radius: 6px;
+    }
+
+    ul li {
+      padding: 5px;
+      color: #0b6efd;
+    }
+
+    /* Link styling with pseudo-classes */
+    a {
+      color: #0b6efd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #ff6b6b;
+      text-decoration: underline;
+    }
+
+    /* Pseudo-element example */
+    a::before {
+      content: "👉 ";
+    }
+
+    a::after {
+      content: " 👈";
+    }
+
   </style>
 </head>
 <body>
-  <header class="brand">My Site</header>
-  <div class="container">
-    <p class="notice">This is an internal-style notice — defined inside the page.</p>
-  </div>
+
+  <h1>Internal CSS Demo</h1>
+  <p>This is a paragraph showing font, color, and background.</p>
+
+  <table>
+    <tr><th>Name</th><th>Marks</th></tr>
+    <tr><td>john</td><td>90</td></tr>
+    <tr><td>serlock</td><td>85</td></tr>
+  </table>
+
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+  </ul>
+
+  <a href="#">Hover over me</a>
+
 </body>
 </html>
