@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Internal CSS Example</title>
+  <style>
+    /* Internal styles (page-specific) */
+    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+    header { background: linear-gradient(90deg,#f0f9ff,#fff); padding: 18px; }
+    header .brand { font-size: 1.4rem; color: #0b6efd; }
+    .notice { background: #fff8e6; border-left: 4px solid #ffd166; padding: 10px; border-radius: 6px; }
+    /* internal pseudo-class */
+    .notice:hover { transform: translateY(-2px); transition: transform .15s; }
+  </style>
+</head>
+<body>
+  <header class="brand">My Site</header>
+  <div class="container">
+    <p class="notice">This is an internal-style notice — defined inside the page.</p>
+  </div>
+</body>
+</html>

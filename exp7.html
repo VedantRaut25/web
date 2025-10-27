@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asynchronous & Callback Example</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+  <h2>Asynchronous Programming with Callback</h2>
+  <button onclick="startProcess()">Start</button>
+  <p id="output"></p>
+
+  <script>
+    // Function that uses a callback
+    function showMessage(callback) {
+      setTimeout(() => {
+        document.getElementById("output").innerHTML = "Step 1: Data Loaded!";
+        callback(); // calling the callback after task completes
+      }, 2000); // delay of 2 seconds (asynchronous)
+    }
+    function startProcess() {
+      document.getElementById("output").innerHTML = "Loading...";
+      showMessage(() => {
+        document.getElementById("output").innerHTML += "<br>Step 2: Process Done!";
+      });
+    }
+  </script>
+</body>
+</html>

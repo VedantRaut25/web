@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise and Arrow Function</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+  <h2>Promise & Arrow Function Example</h2>
+  <button onclick="showResult()">Run</button>
+  <p id="output"></p>
+
+  <script>
+    // Arrow function returning a Promise
+    const myPromise = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => resolve("Task Completed!"), 2000);
+      });
+    };
+    // Function to use the Promise
+    const showResult = () => {
+      document.getElementById("output").innerHTML = "Please wait...";
+      myPromise().then(msg => {
+        document.getElementById("output").innerHTML = msg;
+      });
+    };
+  </script>
+</body>
+</html>

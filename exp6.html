@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Example</title>
+ 
+</head>
+<body>
+
+  <h2>JavaScript Example</h2>
+
+  <!-- Even or Odd -->
+  <input type="number" id="num" placeholder="Enter a number">
+  <button onclick="checkEvenOdd()">Check Even/Odd</button>
+  <p id="result"></p>
+
+  <hr>
+
+  <!-- Array Built-in Function -->
+  <h3>Array Example</h3>
+  <p id="array"></p>
+
+  <hr>
+
+  <!-- Change Background -->
+  <button onclick="changeColor()">Change Background Color</button>
+
+  <script>
+    // Check Even or Odd
+    function checkEvenOdd() {
+      let n = document.getElementById("num").value;
+      if (n % 2 == 0)
+        document.getElementById("result").innerHTML = n + " is Even";
+      else
+        document.getElementById("result").innerHTML = n + " is Odd";
+    }
+
+    // Array built-in function
+    let fruits = ["Apple", "Banana", "Cherry"];
+    fruits.push("Mango"); // built-in function
+    document.getElementById("array").innerHTML = "Fruits: " + fruits.join(", ");
+
+    // Change background color
+    function changeColor() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internal CSS Example</title>
+
+  <style>
+    /* Universal Selector */
+    * {
+      font-family: Arial;
+    }
+
+    /* Body */
+    body {
+      background-color: lightyellow;
+      color: black;
+    }
+
+    /* Heading */
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+
+    /* Paragraph */
+    p {
+      background-color: lightgray;
+      color: darkred;
+      padding: 5px;
+    }
+
+    /* Table */
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    /* List */
+    ul {
+      list-style-type: square;
+      background-color: #e0ffe0;
+    }
+
+    /* Selector and Pseudo-class */
+    a:hover {
+      color: red;
+    }
+
+    /* Pseudo-element */
+    p::first-letter {
+      color: green;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Internal CSS Demo</h1>
+  <p>This is a paragraph showing font, color and background.</p>
+
+  <table>
+    <tr><th>Name</th><th>Marks</th></tr>
+    <tr><td>Avi</td><td>90</td></tr>
+  </table>
+
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JS</li>
+  </ul>
+
+  <a href="#">Hover over me</a>
+
+</body>
+</html>
